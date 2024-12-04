@@ -1,0 +1,226 @@
+/* prova commit */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* scegliere il font */
+}
+
+/* header */
+#navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+ul li{
+    display: inline;
+    margin-left: 40px;
+    color: rgba(226,101,43,255);
+}
+
+li:hover{
+    color: rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(255, 255, 255);
+    padding-bottom: 5px;
+}
+
+/* main */
+#container-presentazione{
+    display: flex;
+    flex: wrap;
+    background-color: rgb(32, 29, 29);
+    justify-content: space-between;
+    align-items: center;
+    height: 867px;
+    padding: 130px;
+    padding-bottom: 50px;
+}
+
+#card{
+    border-radius: 3%;
+    padding: 100px;
+    color: white;
+    margin-right: 50px;
+}
+
+img {
+    border-radius: 1000px;
+    width: 70%;
+    border: 1px solid white;
+    filter: drop-shadow(0 0 0.75rem white);
+    animation-duration: 1.5s;
+    animation-name: brilla;
+    animation-iteration-count: infinite;
+    animation: 1.5s linear 1.5s infinite alternate brilla;
+}
+
+@keyframes brilla{
+    from{ filter: drop-shadow(0 0 0.75rem white);}
+    to{filter: drop-shadow(0 0 0 rgb(0, 0, 0));}
+}
+
+#social i{
+    color:rgb(240, 114, 25);
+    margin: 0px 25px 0px 0px;
+    font-size: 25px;
+    /* animation-duration: 1.5s; */
+    border: solid 2px rgb(240, 114, 25);
+    border-radius: 50px;
+    padding: 10px;
+}
+
+#social i:hover{
+   /*  animation-name: ingrandisci; */
+    cursor: pointer;
+    color: white;
+    border: solid 2px white;
+    filter: drop-shadow(0 0 0.75rem white)
+}
+
+/* @keyframes ingrandisci{
+    from{font-size: 25px;}
+    to{font-size: 40px;}
+} */
+
+/* sezione istruzione */
+#istruzione{
+    background-color: black;
+    padding-bottom: 50px;
+}
+
+#btn-tempo{
+    padding: 10px;
+    border-radius: 50px;
+    border: 3px solid rgb(240, 114, 25);
+    cursor: pointer;
+}
+
+#linea-tempo{
+    margin: 100px 50px 100px 100px;
+    height: 46px;
+    max-width: 1100px; 
+    background-color: green;
+    border-radius: 120px;
+    position: relative;
+}
+
+#cursore-linea{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    transition: left 0.5s ease-in-out;
+}
+
+/* sezione hobby */
+#hobby{
+    background-color: rgb(32, 29, 29);
+    padding-bottom: 50px;
+}
+
+#flex-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    gap: 20px; /* Distanza tra le card */
+    max-width: 1150px;
+    margin: 0 auto; /* Centra il contenitore */
+    padding: 10px;   
+}
+
+.hobby-card{
+    background-color: white;
+    margin: 30px;
+    padding: 25px;
+    width: 450px;
+    border-radius: 25px;
+    border: 3px solid rgb(240, 114, 25);
+}
+
+.hobby-card:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    animation: slide-out 1.5s;
+}
+
+@keyframes slide-out{
+    0%{transform: scale(1)}
+    50%{transform: scale(1.3)}
+    100%{transform: scale(1)}
+}
+
+/* form di contatto */
+.form-container {
+    margin-top: 25px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+}
+  
+  #form-title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Campo textarea */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Effetto focus sugli input */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+  border-color: rgb(240, 114, 25);
+  outline: none;
+  }
+  
+  /* Pulsante di invio */
+.btn-submit {
+   background-color: rgb(240, 114, 25);
+   color: white;
+   border: none;
+   padding: 12px 20px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   width: 100%;
+}
+  
+.btn-submit:hover {
+  background-color: rgb(211, 88, 0);
+}

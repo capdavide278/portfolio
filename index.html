@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header id="navbar">
+        <!-- inserire la navbar -->
+        <div style="padding:20px;">
+            <h3 style="color: white;">Davide <span style="color: rgb(240, 114, 25);">Franco</span></h3>
+        </div>
+
+        <div style="padding: 20px;">
+            <ul style=" display: inline;color: white; cursor: pointer;">
+                <li>Home</li>
+                <li>Istruzione & lavori</li>
+                <li>Hobby</li>
+                <li>Contatti</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- inserire descrizone -->
+        <div id="container-presentazione">
+            <div id="card">
+                <h2>Mi chiamo <span style="color: rgb(240, 114, 25);">Davide</span></h2>
+                <h4>Sono un tirocinante Gesan e povero</h4>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem sapiente unde aperiam voluptatem pariatur sit qui quae, natus ad harum tempora et quod molestiae alias ea cupiditate laborum praesentium.</p>
+                <p style="margin-bottom: 25px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae odio expedita perspiciatis! Excepturi, deleniti voluptas rerum alias veniam maxime molestiae, doloribus magni corporis sequi recusandae nihil autem esse quam. Doloremque!</p>
+                
+                <div id="social">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-github-alt"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                
+            </div>
+            
+            <div style="z-index: 1;">
+                <img src="/assets/davide.jpeg" alt="immagine darione">
+            </div>
+        </div>
+
+            <!-- SEZIONE ISTRUZIONE -->
+            <div id="istruzione">
+                <h1 style="color: white;">Il mio viaggio:</h1>
+                <button id="btn-tempo" onclick="lineaTempo()">
+                    <p>Linea del tempo:</p>
+                </button>
+                <!-- Linea del tempo-->
+                <div id="linea-tempo">
+                    <div id="cursore-linea">
+                    </div>
+                </div>
+            </div>
+            <!-- SEZIONE HOBBY -->
+             <div id="hobby">
+                <h2 style="text-align: center;color: white; padding: 10px;">Hobby</h2>
+                <div id="flex-card">
+                    <div class="hobby-card">
+                        <h3 style="margin-bottom: 5px;">Palestra</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat voluptatum, porro nulla ad beatae quae tempore voluptatibus similique voluptates, architecto veritatis expedita fugit blanditiis commodi? Libero provident ullam ipsa.s</p>
+                    </div>
+    
+                    <div class="hobby-card">
+                        <h3 style="margin-bottom: 5px;">Cinema</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat voluptatum, porro nulla ad beatae quae tempore voluptatibus similique voluptates, architecto veritatis expedita fugit blanditiis commodi? Libero provident ullam ipsa.s</p>
+                    </div>
+    
+                    <div class="hobby-card">
+                        <h3 style="margin-bottom: 5px;">Videogames</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat voluptatum, porro nulla ad beatae quae tempore voluptatibus similique voluptates, architecto veritatis expedita fugit blanditiis commodi? Libero provident ullam ipsa.s</p>
+                    </div>
+    
+                    <div class="hobby-card">
+                        <h3 style="margin-bottom: 5px;">Disegno</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat voluptatum, porro nulla ad beatae quae tempore voluptatibus similique voluptates, architecto veritatis expedita fugit blanditiis commodi? Libero provident ullam ipsa.s</p>
+                    </div>
+                </div>
+             </div>
+    </main>
+
+    <footer style="background-color: black;padding: 20px; display: flex;justify-content: center;">
+        <!-- FORM DI RICHIESTA COLLOQUIO-->
+        <div class="form-container">
+            <h2 id="form-title">Contattami</h2>
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+              </div>
+              <div class="form-group">
+                <label for="messaggio">Messaggio:</label>
+                <textarea id="messaggio" name="messaggio" placeholder="Scrivi il tuo messaggio" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Invia</button>
+            </form>
+          </div>
+    </footer>
+    <script src="../script/script.js"></script>
+</body>
+</html>
