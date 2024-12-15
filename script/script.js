@@ -37,7 +37,7 @@ button.addEventListener('click', avanzaTempo)
 const navLinks = document.querySelectorAll('li a')
 const indicator = document.createElement('div')
 indicator.classList.add('indicator')
-document.querySelector('ul').appendChild('indicator')
+document.querySelector('div').appendChild('indicator')
 
 function updateIndicator(link){
     const linkOffsetLeft = link.linkOffsetLeft
@@ -52,8 +52,6 @@ navLinks.forEach((link)=>
         navLinks.forEach((item) => item.classList.remove('active'))
         link.classList.add('active')
         updateIndicator(link)
-        const sezione = document.querySelectorAll(link.getAttribute('href'))
-        sezione.scrollIntoView({ behavior:'smooth'})
     })
 )
 
