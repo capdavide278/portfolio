@@ -1,4 +1,4 @@
-/* prova commit */
+
 *{
     padding: 0;
     margin: 0;
@@ -23,10 +23,29 @@ ul li{
     color: rgba(226,101,43,255);
 }
 
-li:hover{
+li a{
+    text-decoration: none;
+    color: rgba(226,101,43,255);
+    position: relative;
+}
+
+li a:hover{
     color: rgb(255, 255, 255);
-    border-bottom: solid 2px rgb(255, 255, 255);
     padding-bottom: 5px;
+}
+
+.indicator{
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: rgba(226, 101, 43, 255);
+    width: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+li a.active ~ .indicator {
+    left: 0;
+    width: 100%;
 }
 
 /* main */
@@ -93,18 +112,11 @@ img {
     padding-bottom: 50px;
 }
 
-#btn-tempo{
-    padding: 10px;
-    border-radius: 50px;
-    border: 3px solid rgb(240, 114, 25);
-    cursor: pointer;
-}
-
 #linea-tempo{
-    margin: 100px 50px 100px 100px;
+    margin: 100px 150px 100px 400px;
     height: 46px;
     max-width: 1100px; 
-    background-color: green;
+    background-color: #808080;
     border-radius: 120px;
     position: relative;
 }
@@ -112,6 +124,7 @@ img {
 #cursore-linea{
     width: 50px;
     height: 50px;
+    cursor: pointer;
     background-color: white;
     position: absolute;
     border-radius: 50%;
