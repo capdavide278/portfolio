@@ -39,3 +39,28 @@ const indicator = document.createElement('div')
 indicator.classList.add('indicator')
 document.querySelector('ul').appendChild('indicator')
 
+function updateIndicator(link){
+    const linkOffsetLeft = link.linkOffsetLeft
+    const linkWidth = link.linkOffsetWidth
+    indicator.style.left =`${linkOffsetLeft}px`
+    indicator.style.width = `${linkWidth}px`
+}
+
+navLinks.forEach((link)=>
+    link.addEventListener('click', (e) =>{
+        e.preventDefault();
+        navLinks.forEach((item) => item.classList.remove('active'))
+        link.classList.add('active')
+        updateIndicator(link)
+        const sezione = document.querySelectorAll(link.getAttribute('href'))
+        sezione.scrollIntoView({ behavior:'smooth'})
+    })
+)
+
+document.addEventListener('DOMContentLoaded', () =>{
+    const linkAttivo = document.querySelectorAll('li a.active') || navLinks[0]
+    if (activeLink){
+        activeLink.classList.add('active')
+        updateIndicator(linkAttivo)
+    }
+})
